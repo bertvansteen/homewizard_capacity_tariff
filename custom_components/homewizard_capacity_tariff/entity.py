@@ -6,23 +6,31 @@ from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from .const import ATTRIBUTION
-from .coordinator import BlueprintDataUpdateCoordinator
+from .coordinator import HomeWizardCapacityTariffDataUpdateCoordinator
 
 
-class IntegrationBlueprintEntity(CoordinatorEntity[BlueprintDataUpdateCoordinator]):
+class HomeWizardCapacityTariffEntity(
+    CoordinatorEntity[HomeWizardCapacityTariffDataUpdateCoordinator]
+):
     """BlueprintEntity class."""
 
     _attr_attribution = ATTRIBUTION
 
-    def __init__(self, coordinator: BlueprintDataUpdateCoordinator) -> None:
+    def __init__(
+        self, coordinator: HomeWizardCapacityTariffDataUpdateCoordinator
+    ) -> None:
         """Initialize."""
         super().__init__(coordinator)
         self._attr_unique_id = coordinator.config_entry.entry_id
         self._attr_device_info = DeviceInfo(
+            name="HomeWizard Capacity Tariff",
+            manufacturer="HomeWizard",
+            model="P1 Meter",
             identifiers={
                 (
                     coordinator.config_entry.domain,
-                    coordinator.config_entry.entry_id,
+                    coordinator.config_entry.unique_id
+                    or coordinator.config_entry.entry_id,
                 ),
             },
         )

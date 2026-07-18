@@ -1,0 +1,16 @@
+{
+  "domain": "homewizard_capacity_tariff",
+  "name": "HomeWizard Capacity Tariff",
+  "codeowners": [
+    "@bertvansteen"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/bertvansteen/homewizard_capacity_tariff",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/bertvansteen/homewizard_capacity_tariff/issues",
+  "requirements": [
+    "dsmr-parser>=1.7.0"
+  ],
+  "version": "0.1.0"
+}
