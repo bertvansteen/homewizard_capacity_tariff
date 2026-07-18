@@ -1,40 +1,54 @@
-# Notice
+## Installation
+Copy contents of custom_components folder to your home-assistant config/custom_components folder or install through HACS. After reboot of Home-Assistant, this integration can be configured through the integration setup UI
 
-The component and platforms in this repository are not meant to be used by a
-user, but as a "blueprint" that custom component developers can build
-upon, to make more awesome stuff.
+## Exposed entities
+Here is a list of exposed entities:
 
-HAVE FUN! 😎
+### Sensor
 
-## Why?
+| Key | Name | Unit | Enabled by default |
+| --- | --- | --- | --- |
+| active_power_w | Active power | W | Yes |
+| current_month_peak | Current month peak | W | Yes |
+| current_month_peak_timestamp | Current month peak timestamp | - | Yes |
+| interval_average_demand | Interval average demand | W | Yes |
+| interval_projection_history | Interval projection (history) | W | Yes |
+| interval_projection_power | Interval projection (power) | W | Yes |
+| interval_allowance_month_peak | Interval allowance (current month peak) | W | Yes |
+| interval_time_remaining | Interval time remaining | - | Yes (hidden by default) |
+| january_peak | January peak | W | No |
+| january_timestamp | January peak timestamp | - | No |
+| february_peak | February peak | W | No |
+| february_peak_timestamp | February peak timestamp | - | No |
+| march_peak | March peak | W | No |
+| march_peak_timestamp | March peak timestamp | - | No |
+| april_peak | April peak | W | No |
+| april_peak_timestamp | April peak timestamp | - | No |
+| may_peak | May peak | W | No |
+| may_peak_timestamp | May peak timestamp | - | No |
+| june_peak | June peak | W | No |
+| june_peak_timestamp | June peak timestamp | - | No |
+| july_peak | July peak | W | No |
+| july_peak_timestamp | July peak timestamp | - | No |
+| august_peak | August peak | W | No |
+| august_peak_timestamp | August peak timestamp | - | No |
+| september_peak | September peak | W | No |
+| september_peak_timestamp | September peak timestamp | - | No |
+| october_peak | October peak | W | No |
+| october_peak_timestamp | October peak timestamp | - | No |
+| november_peak | November peak | W | No |
+| november_peak_timestamp | November peak timestamp | - | No |
+| december_peak | December peak | W | No |
+| december_peak_timestamp | December peak timestamp | - | No |
+| average_peak | Average peak | W | Yes |
 
-This is simple, by having custom_components look (README + structure) the same
-it is easier for developers to help each other and for users to start using them.
+Monthly peak sensors (January - December) are disabled by default to avoid cluttering the entity list; enable the ones you need from the entity settings.
 
-If you are a developer and you want to add things to this "blueprint" that you think more
-developers will have use for, please open a PR to add it :)
+### Binary sensor
 
-## What?
-
-This repository contains multiple files, here is a overview:
-
-File | Purpose | Documentation
--- | -- | --
-`.devcontainer.json` | Used for development/testing with Visual Studio Code. | [Documentation](https://code.visualstudio.com/docs/remote/containers)
-`.github/ISSUE_TEMPLATE/*.yml` | Templates for the issue tracker | [Documentation](https://help.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository)
-`custom_components/integration_blueprint/*` | Integration files, this is where everything happens. | [Documentation](https://developers.home-assistant.io/docs/creating_component_index)
-`CONTRIBUTING.md` | Guidelines on how to contribute. | [Documentation](https://help.github.com/en/github/building-a-strong-community/setting-guidelines-for-repository-contributors)
-`LICENSE` | The license file for the project. | [Documentation](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository)
-`README.md` | The file you are reading now, should contain info about the integration, installation and configuration instructions. | [Documentation](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
-`requirements.txt` | Python packages used for development/lint/testing this integration. | [Documentation](https://pip.pypa.io/en/stable/user_guide/#requirements-files)
-
-## How?
-
-1. Create a new repository in GitHub, using this repository as a template by clicking the "Use this template" button in the GitHub UI.
-1. Open your new repository in Visual Studio Code devcontainer (Preferably with the "`Dev Containers: Clone Repository in Named Container Volume...`" option).
-1. Rename all instances of the `integration_blueprint` to `custom_components/<your_integration_domain>` (e.g. `custom_components/awesome_integration`).
-1. Rename all instances of the `Integration Blueprint` to `<Your Integration Name>` (e.g. `Awesome Integration`).
-1. Run the `scripts/develop` to start HA and test out your new integration.
+| Key | Name | Enabled by default |
+| --- | --- | --- |
+| high_power | High power | Yes |
 
 ## Next steps
 
