@@ -1,0 +1,148 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "description": "Create HomeWizard Capacity Tariff configuration for your HomeWizard device",
+                "data": {
+                    "ip_address": "IP address",
+                    "target_capacity": "Target capacity in kW: The minimum capactity tariff is set to 2.5 kW.",
+                    "max_capacity": "Maximum capacity in kW: The maximum capacity of your grid connection. This is usually 3x20A (13.8 kW), 3x32A (22.0 kW) or 1x40A (9.02A)"
+                }
+            },
+            "reauth": {
+                "description": "Create HomeWizard Capacity Tariff configuration for your HomeWizard device.",
+                "data": {
+                    "ip_address": "IP address",
+                    "target_capacity": "Target capacity in kW: The minimum capactity tariff is set to 2.5 kW.",
+                    "max_capacity": "Maximum capacity in kW: The maximum capacity of your grid connection. This is usually 3x20A (13.8 kW), 3x32A (22.0 kW) or 1x40A (9.02A)"
+                }
+            }
+        },
+        "error": {
+            "auth": "Unable to authenticate with the device.",
+            "connection": "Unable to connect to the device.",
+            "unknown": "Unknown error occurred."
+        },
+        "abort": {
+            "already_configured": "This device is already configured.",
+            "wrong_device": "This IP address belongs to a different device than the one being reconfigured.",
+            "reauth_successful": "Re-authentication was successful."
+        }
+    },
+    "entity": {
+        "sensor": {
+            "active_power_w": {
+                "name": "Active power"
+            },
+            "current_month_peak": {
+                "name": "Current month peak"
+            },
+            "current_month_peak_timestamp": {
+                "name": "Current month peak timestamp"
+            },
+            "interval_average_demand": {
+                "name": "Interval average demand"
+            },
+            "interval_projection_history": {
+                "name": "Interval projection (history)"
+            },
+            "interval_projection_power": {
+                "name": "Interval projection (power)"
+            },
+            "interval_allowance_month_peak": {
+                "name": "Interval allowance (current month peak)"
+            },
+            "interval_time_remaining": {
+                "name": "Interval time remaining"
+            },
+            "january_peak": {
+                "name": "January peak"
+            },
+            "january_timestamp": {
+                "name": "January peak timestamp"
+            },
+            "february_peak": {
+                "name": "February peak"
+            },
+            "february_peak_timestamp": {
+                "name": "February peak timestamp"
+            },
+            "march_peak": {
+                "name": "March peak"
+            },
+            "march_peak_timestamp": {
+                "name": "March peak timestamp"
+            },
+            "april_peak": {
+                "name": "April peak"
+            },
+            "april_peak_timestamp": {
+                "name": "April peak timestamp"
+            },
+            "may_peak": {
+                "name": "May peak"
+            },
+            "may_peak_timestamp": {
+                "name": "May peak timestamp"
+            },
+            "june_peak": {
+                "name": "June peak"
+            },
+            "june_peak_timestamp": {
+                "name": "June peak timestamp"
+            },
+            "july_peak": {
+                "name": "July peak"
+            },
+            "july_peak_timestamp": {
+                "name": "July peak timestamp"
+            },
+            "august_peak": {
+                "name": "August peak"
+            },
+            "august_peak_timestamp": {
+                "name": "August peak timestamp"
+            },
+            "september_peak": {
+                "name": "September peak"
+            },
+            "september_peak_timestamp": {
+                "name": "September peak timestamp"
+            },
+            "october_peak": {
+                "name": "October peak"
+            },
+            "october_peak_timestamp": {
+                "name": "October peak timestamp"
+            },
+            "november_peak": {
+                "name": "November peak"
+            },
+            "november_peak_timestamp": {
+                "name": "November peak timestamp"
+            },
+            "december_peak": {
+                "name": "December peak"
+            },
+            "december_peak_timestamp": {
+                "name": "December peak timestamp"
+            },
+            "average_peak": {
+                "name": "Average peak"
+            }
+        },
+        "binary_sensor": {
+            "high_power": {
+                "name": "High power"
+            }
+        },
+        "number": {
+            "target_capacity": {
+                "name": "Target capacity"
+            },
+            "max_capacity": {
+                "name": "Max capacity"
+            }
+        }
+    }
+}
